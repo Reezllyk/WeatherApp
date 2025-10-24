@@ -1,0 +1,28 @@
+<svg width="170" height="170" viewBox="0 0 170 170" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @keyframes rotate { to { transform: rotate(360deg); } }
+    .rays { animation: rotate 12s linear infinite; transform-origin: center; }
+  </style>
+  <circle cx="85" cy="85" r="35" fill="#f0ca43" filter="url(#glow)"/>
+  <g class="rays">
+    <rect x="82" y="45" width="6" height="25" fill="#f0ca43" rx="30" transform="rotate(0 85 85)"/>
+    <rect x="82" y="45" width="6" height="25" fill="#f0ca43" rx="30" transform="rotate(45 85 85)"/>
+    <rect x="82" y="45" width="6" height="25" fill="#f0ca43" rx="30" transform="rotate(90 85 85)"/>
+    <rect x="82" y="45" width="6" height="25" fill="#f0ca43" rx="30" transform="rotate(135 85 85)"/>
+    <rect x="82" y="45" width="6" height="25" fill="#f0ca43" rx="30" transform="rotate(180 85 85)"/>
+    <rect x="82" y="45" width="6" height="25" fill="#f0ca43" rx="30" transform="rotate(225 85 85)"/>
+    <rect x="82" y="45" width="6" height="25" fill="#f0ca43" rx="30" transform="rotate(270 85 85)"/>
+    <rect x="82" y="45" width="6" height="25" fill="#f0ca43" rx="30" transform="rotate(315 85 85)"/>
+  </g>
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feFlood flood-color="#f0ca43" flood-opacity="0.6"/>
+      <feComposite in2="blur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+</svg>

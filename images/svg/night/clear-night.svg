@@ -1,0 +1,39 @@
+<svg width="170" height="170" viewBox="0 0 170 170" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="sky" cx="50%" cy="30%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </radialGradient>
+    <radialGradient id="moonGlow">
+      <stop offset="0%" stop-color="#f8fafc" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#e2e8f0" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Небо -->
+  <rect width="170" height="170" fill="url(#sky)"/>
+
+  <!-- Звёзды с мерцанием -->
+  <style>
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.6; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.2); }
+    }
+    .star { animation: twinkle 3s infinite; filter: drop-shadow(0 0 4px #fff); }
+    .star:nth-child(1) { animation-delay: 0s; }
+    .star:nth-child(2) { animation-delay: 0.5s; }
+    .star:nth-child(3) { animation-delay: 1s; }
+    .star:nth-child(4) { animation-delay: 1.5s; }
+    .star:nth-child(5) { animation-delay: 2s; }
+  </style>
+  <circle class="star" cx="45" cy="35" r="2"/>
+  <circle class="star" cx="75" cy="25" r="1.5"/>
+  <circle class="star" cx="110" cy="45" r="2"/>
+  <circle class="star" cx="55" cy="70" r="1.8"/>
+  <circle class="star" cx="130" cy="65" r="2"/>
+
+  <!-- Луна -->
+  <circle cx="125" cy="50" r="30" fill="#f1f5f9"/>
+  <circle cx="132" cy="45" r="27" fill="#e2e8f0"/>
+  <circle cx="125" cy="50" r="35an30" fill="url(#moonGlow)" filter="blur(8px)"/>
+</svg>

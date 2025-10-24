@@ -1,0 +1,37 @@
+<svg width="170" height="170" viewBox="0 0 170 170" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @keyframes swirl {
+      0% { transform: translateX(0) scale(1); opacity: 0.4; }
+      50% { transform: translateX(12px) scale(1.05); opacity: 0.6; }
+      100% { transform: translateX(0) scale(1); opacity: 0.4; }
+    }
+    .fog {
+      animation: swirl 12s ease-in-out infinite;
+      filter: blur(8px);
+    }
+    .fog:nth-child(2) { animation-delay: 3s; }
+    .fog:nth-child(3) { animation-delay: 6s; }
+    .fog:nth-child(4) { animation-delay: 9s; }
+  </style>
+
+  <!-- Плотные клубы тумана -->
+  <ellipse class="fog" cx="85" cy="100" rx="80" ry="40" fill="#cfd8dc" opacity="0.5"/>
+  <ellipse class="fog" cx="70" cy="90" rx="70" ry="35" fill="#b0bec5" opacity="0.4"/>
+  <ellipse class="fog" cx="100" cy="85" rx="65" ry="32" fill="#90a4ae" opacity="0.35"/>
+  <ellipse class="fog" cx="85" cy="110" rx="75" ry="38" fill="#78909c" opacity="0.3"/>
+
+  <!-- Дополнительные слои для глубины -->
+  <ellipse class="fog" cx="60" cy="105" rx="50" ry="25" fill="#607d8b" opacity="0.25"/>
+  <ellipse class="fog" cx="110" cy="95" rx="45" ry="22" fill="#607d8b" opacity="0.25"/>
+
+  <!-- Едва видны очертания (как в густом тумане) -->
+  <path d="M40 70 Q65 50, 90 65 T140 70 Q125 85, 100 80 Q75 85, 50 75 Z" 
+        fill="none" stroke="#546e7a" stroke-width="1" opacity="0.1"/>
+
+  <defs>
+    <filter id="turbulence">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="3" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="10"/>
+    </filter>
+  </defs>
+</svg>

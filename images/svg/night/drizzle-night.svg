@@ -1,0 +1,14 @@
+<svg width="170" height="170" viewBox="0 0 170 170" xmlns="http://www.w3.org/2000/svg">
+  <rect width="170" height="170" fill="#0f172a"/>
+  <ellipse cx="85" cy="85" rx="60" ry="25" fill="#334155"/>
+  <ellipse cx="65" cy="78" rx="32" ry="22" fill="#475569"/>
+
+  <style>
+    @keyframes fall { 0% { transform: translateY(-40px); opacity: 0; } 50% { opacity: 0.7; } 100% { transform: translateY(80px); opacity: 0; } }
+    .drop { animation: fall 1.8s linear infinite; filter: drop-shadow(0 0 3px #94a3b8); }
+    .drop:nth-child(2) { animation-delay: 0.6s; }
+  </style>
+  <path class="drop" d="M60 95 Q58 100, 60 105 L59 110 L61 110 Z" fill="#94a3b8"/>
+  <path class="drop" d="M85 95 Q83 100, 85 105 L84 110 L86 110 Z" fill="#94a3b8"/>
+  <path class="drop" d="M110 95 Q108 100, 110 105 L109 110 L111 110 Z" fill="#94a3b8"/>
+</svg>

@@ -1,0 +1,22 @@
+<svg width="170" height="170" viewBox="0 0 170 170" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @keyframes fall { 0% { transform: translateY(-60px) rotate(0deg); } 100% { transform: translateY(100px) rotate(360deg); } }
+    .flake { animation: fall 5s linear infinite; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2)); }
+    .flake:nth-child(2) { animation-delay: 1s; }
+    .flake:nth-child(3) { animation-delay: 2s; }
+    .flake:nth-child(4) { animation-delay: 3s; }
+  </style>
+  <!-- Облако -->
+  <ellipse cx="85" cy="85" rx="60" ry="25" fill="#e3f2fd" filter="url(#soft)"/>
+  <ellipse cx="65" cy="78" rx="32" ry="22" fill="#f5f9ff"/>
+  <ellipse cx="105" cy="75" rx="35" ry="24" fill="#f5f9ff"/>
+  <!-- Снежинки -->
+  <circle class="flake" cx="55" cy="95" r="5" fill="white"/>
+  <circle class="flake" cx="80" cy="95" r="6" fill="white"/>
+  <circle class="flake" cx="105" cy="95" r="5" fill="white"/>
+  <circle class="flake" cx="70" cy="105" r="4" fill="white"/>
+  <circle class="flake" cx="95" cy="105" r="5" fill="white"/>
+  <defs>
+    <filter id="soft"><feGaussianBlur stdDeviation="3"/></filter>
+  </defs>
+</svg>

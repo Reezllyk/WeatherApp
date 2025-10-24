@@ -1,0 +1,16 @@
+<svg width="170" height="170" viewBox="0 0 170 170" xmlns="http://www.w3.org/2000/svg">
+  <rect width="170" height="170" fill="#0f172a"/>
+  <ellipse cx="85" cy="85" rx="60" ry="25" fill="#1e293b"/>
+  <ellipse cx="65" cy="78" rx="32" ry="22" fill="#334155"/>
+
+  <style>
+    @keyframes fall { 0% { transform: translateY(-60px) rotate(0deg); } 100% { transform: translateY(100px) rotate(360deg); } }
+    .flake { animation: fall 6s linear infinite; filter: drop-shadow(0 0 6px #e0e7ff); }
+    .flake:nth-child(2) { animation-delay: 2s; }
+  </style>
+  <circle class="flake" cx="55" cy="95" r="5" fill="#e0e7ff"/>
+  <circle class="flake" cx="80" cy="95" r="6" fill="#c3dafe"/>
+  <circle class="flake" cx="105" cy="95" r="5" fill="#e0e7ff"/>
+  <circle class="flake" cx="70" cy="105" r="4" fill="#c3dafe"/>
+  <circle class="flake" cx="95" cy="105" r="5" fill="#e0e7ff"/>
+</svg>

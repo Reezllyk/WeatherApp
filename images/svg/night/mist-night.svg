@@ -1,0 +1,27 @@
+<svg width="170" height="170" viewBox="0 0 170 170" xmlns="http://www.w3.org/2000/svg">
+  <rect width="170" height="170" fill="#0f172a"/>
+
+  <style>
+    @keyframes drift { 0% { transform: translateX(-12px); opacity: 0.4; } 100% { transform: translateX(12px); opacity: 0.6; } }
+    .fog { animation: drift 14s ease-in-out infinite alternate; filter: blur(12px); }
+    .fog:nth-child(2) { animation-delay: 5s; }
+  </style>
+
+  <!-- Густой туман -->
+  <ellipse class="fog" cx="85" cy="100" rx="85" ry="45" fill="#1e293b"/>
+  <ellipse class="fog" cx="70" cy="90" rx="75" ry="40" fill="#334155"/>
+  <ellipse class="fog" cx="100" cy="85" rx="70" ry="35" fill="#475569"/>
+
+  <!-- Фонари в тумане -->
+  <circle cx="55" cy="115" r="4" fill="#fbbf24" filter="url(#glow)"/>
+  <circle cx="115" cy="110" r="3" fill="#f59e0b" filter="url(#glow)"/>
+
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feFlood flood-color="#fbbf24" flood-opacity="0.6"/>
+      <feComposite in2="blur" operator="in"/>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+</svg>

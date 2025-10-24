@@ -1,0 +1,22 @@
+<svg width="170" height="170" viewBox="0 0 170 170" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="nightSky">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </radialGradient>
+  </defs>
+  <rect width="170" height="170" fill="url(#nightSky)"/>
+
+  <circle cx="125" cy="50" r="30" fill="#64748b" opacity="0.3"/>
+
+  <style>
+    @keyframes float { 0%,100% { transform: translateX(0); } 50% { transform: translateX(6px); } }
+    .cloud { animation: float 8s ease-in-out infinite; }
+    .cloud:nth-child(2) { animation-delay: 4s; }
+  </style>
+  <ellipse class="cloud" cx="85" cy="95" rx="65" ry="28" fill="#334155"/>
+  <ellipse class="cloud" cx="60" cy="85" rx="35" ry="25" fill="#475569"/>
+  <ellipse class="cloud" cx="100" cy="80" rx="40" ry="28" fill="#475569"/>
+  <ellipse cx="50" cy="92" rx="20" ry="15" fill="#1e293b" opacity="0.8"/>
+  <ellipse cx="125" cy="50" r="35" fill="#e2e8f0" opacity="0.15" filter="blur(10px)"/>
+</svg>

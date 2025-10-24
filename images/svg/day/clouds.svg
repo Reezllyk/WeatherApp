@@ -1,0 +1,37 @@
+<svg width="170" height="170" viewBox="0 0 170 170" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @keyframes float {
+      0%, 100% { transform: translateX(0) translateY(0); }
+      50% { transform: translateX(6px) translateY(-3px); }
+    }
+    .cloud {
+      animation: float 8s ease-in-out infinite;
+      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
+    }
+    .cloud:nth-child(2) { animation-delay: 2s; }
+    .cloud:nth-child(3) { animation-delay: 4s; }
+  </style>
+
+  <!-- Большое облако (фон) -->
+  <ellipse class="cloud" cx="85" cy="95" rx="65" ry="28" fill="#f8f9fa" opacity="0.9"/>
+  <ellipse class="cloud" cx="60" cy="85" rx="35" ry="25" fill="#ffffff"/>
+  <ellipse class="cloud" cx="100" cy="80" rx="40" ry="28" fill="#ffffff"/>
+  <ellipse class="cloud" cx="120" cy="88" rx="30" ry="22" fill="#f1f3f5"/>
+
+  <!-- Мелкие детали -->
+  <ellipse cx="50" cy="92" rx="20" ry="15" fill="#e9ecef" opacity="0.8"/>
+  <ellipse cx="135" cy="90" rx="18" ry="14" fill="#e9ecef" opacity="0.7"/>
+
+  <!-- Тень под облаком -->
+  <ellipse cx="85" cy="110" rx="70" ry="15" fill="url(#shadow)" opacity="0.3"/>
+  
+  <defs>
+    <radialGradient id="shadow">
+      <stop offset="0%" stop-color="#000"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+  </defs>
+</svg>
